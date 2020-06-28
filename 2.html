@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #cav {
+            background: #051C5B;
+            border: 1px solid #f90;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="./pie.js"></script>
+</head>
+<body>
+    <canvas id="cav" width="400" height="400"></canvas>
+    <script>
+        // let cav = document.querySelector('#cav')
+        // let ctx = cav.getContext('2d')
+        // const r = 100
+
+        // ctx.beginPath()
+        // ctx.arc(200, 200, r, 0, 2 * Math.PI, false)
+        // // 将原点设置为 饼图中心点(圆心)
+        // ctx.translate(200, 200)
+        // ctx.strokeStyle = '#0375EE'
+        // ctx.lineWidth = 4
+        // ctx.stroke()
+        
+        // const engle = 360 / 36
+        // const rad = Math.PI / 180 * 0
+        // let x = Math.cos(rad) * (r - 10)
+        // let y = Math.sin(rad) * (r - 10)
+
+        // ctx.beginPath()
+        // // ctx.rotate(Math.PI / 180 * engle)
+        
+
+        // for (let i = 0; i < 36; i++) {
+        //     ctx.beginPath()
+        //     ctx.rotate(Math.PI / 180 * engle)
+        //     ctx.moveTo(x, y - 5)
+        //     ctx.lineTo(x, y + 5)
+        //     ctx.lineTo(x - 20, y + 3)
+        //     ctx.lineTo(x - 20, y - 3)
+        //     ctx.fillStyle = '#002E8C'
+        //     ctx.fill()
+        // }
+        
+        // ctx.beginPath()
+        // ctx.textAlign = 'center' //绘制的刻度在整个画布左右居中 
+        // ctx.textBaseline = 'middle' 
+        // ctx.font = 28 + "px Arial" //设置显示刻度的数字 1,2,3.. 的字体及字号 　
+        // ctx.fillStyle = '#34FAFB'
+        // ctx.fillText('75%', 0, 0)
+        
+    </script>
+    <script>
+        let option = {
+            radius: 100,
+            borderWidth: 4,
+            borderColor: '#0375EE',
+            innerPointer: {
+                show: true,
+                count: 100,
+                color: '#002E8C',
+                highlight: '#34FAFB'
+            },
+            progress: {
+                show: true,
+                progress: 0.99,
+                font: '48px Arial',
+                color: '#34FAFB'
+            },
+            title: {
+                show: true,
+                text: 'CPU总数：10',
+                font: '14px 微软雅黑',
+                color: '#34FAFB'
+            }
+        }
+        const pie = new Pie("#cav", option)
+    </script>
+</body>
+</html>

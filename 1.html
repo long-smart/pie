@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #cav {
+            background: #051C5B;
+            border: 1px solid #f90;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="./dashboard.js"></script>
+</head>
+<body>
+    <canvas id="cav" width="300" height="300"></canvas>
+    <script>
+        // const cav = document.querySelector('#cav')
+        // const ctx = cav.getContext('2d')
+            
+        // ctx.save()
+        // ctx.beginPath()
+        // ctx.arc(150, 150, 100, Math.PI / 180 * 150, Math.PI / 180 * 30, false)
+        // ctx.strokeStyle = '#002DD9'
+        // ctx.lineWidth = 5
+        // ctx.setLineDash([12])
+        // ctx.stroke()
+        // ctx.restore()
+
+        
+        // ctx.save()
+        // ctx.beginPath()
+        // ctx.translate(150, 150)
+        // ctx.arc(0, 0, 70, Math.PI / 180 * 140, Math.PI / 180 * 40, false)
+        // let gr = ctx.createLinearGradient(-70, -70, 50, 30)
+        // gr.addColorStop(0, '#0070F3')
+        // gr.addColorStop(1, '#00F378')
+        // ctx.strokeStyle = gr
+        // ctx.lineWidth = 20
+        // ctx.stroke()
+        // ctx.restore()
+
+
+        // // 画指针中心
+        // ctx.save()
+        // ctx.beginPath()
+        // ctx.translate(150, 200)
+        // ctx.moveTo(-2, -4)
+        // ctx.lineTo(-2, 4)
+        // ctx.lineTo(-90, 0)
+        // ctx.fillStyle = '#00F5F5'
+        // ctx.fill()
+        
+        
+        // ctx.beginPath()
+        // ctx.arc(0, 0, 5, 0, Math.PI * 2, false)
+        // ctx.fillStyle = '#00F5F5'
+        // ctx.fill()
+        // ctx.textAlign = 'center' //绘制的刻度在整个画布左右居中 
+        // ctx.textBaseline = 'middle' 
+        // ctx.fillStyle = '#000'
+        // ctx.fillText('+', 0, 0)
+        // ctx.restore()
+
+        // ctx.save()
+        // ctx.beginPath()
+        // ctx.translate(150, 150)
+        // const rad1 = Math.PI / 180 * 140
+        // const x1 = Math.cos(rad1) * 100
+        // const y1 = Math.sin(rad1) * 100
+        // ctx.textAlign = 'center' //绘制的刻度在整个画布左右居中 
+        // ctx.textBaseline = 'middle' 
+        // ctx.fillStyle = '#fff'
+        // ctx.fillText('0', x1 - 10, y1)
+
+        // const rad2 = Math.PI / 180 * 40
+        // const x2 = Math.cos(rad2) * 100
+        // const y2 = Math.sin(rad2) * 100
+        // ctx.fillText('100', x2 + 10, y2)
+
+        // ctx.fillText('已同步10%', 0, 70)
+    </script>
+
+    <script>
+        const dashboard = new Dashboard('#cav', 100, 0.5)
+    </script>
+</body>
+</html>
